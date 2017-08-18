@@ -15,6 +15,7 @@ module.exports = class Class {
         this.num =num;
         this.member=[];
         this.leader;
+
     }
 
     appendMember(student){
@@ -23,7 +24,7 @@ module.exports = class Class {
     }
 
     assignLeader(student){
-        this.leader = student.name
+        this.leader = student.name;
         let finded=find(this.member,student.name)
         if ((this.leader===student.name)&&(finded)){
             return 'Assign team leader successfully.'
@@ -31,7 +32,5 @@ module.exports = class Class {
             return 'It is not one of us.'
         }
     }
-    toHaveBeenCalledWith(){
 
-    }
 }

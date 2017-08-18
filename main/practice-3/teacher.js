@@ -30,6 +30,19 @@ module.exports = class Teacher extends Person{
             }
         }
         return false
+    }
+
+    notifyStudentAppended(){
+        for(let item of this.clazzes){
+            if (item.member.length!=0){
+                return item.member[item.member.length-1] +' has joined Class'+item.num
+            }
+        }
+
+
+    }
+
+    notifyLeaderAssigned(){
 
     }
 
