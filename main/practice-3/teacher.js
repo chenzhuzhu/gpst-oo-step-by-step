@@ -4,7 +4,10 @@ module.exports = class Teacher extends Person{
 
     constructor(name,age,clazzes){
         super(name,age);
+        this.assginClass(clazzes);
         this.clazzes = clazzes;
+
+
     }
 
     introduce(){
@@ -33,17 +36,17 @@ module.exports = class Teacher extends Person{
     }
 
     notifyStudentAppended(){
-        for(let item of this.clazzes){
-            if (item.member.length!=0){
-                return item.member[item.member.length-1] +' has joined Class'+item.num
-            }
-        }
-
-
     }
-
+    //
     notifyLeaderAssigned(){
 
     }
+    assginClass(clazzes){
+        for(let item of clazzes){
+            item.teacher=this;
+        }
+    }
+
+
 
 }
